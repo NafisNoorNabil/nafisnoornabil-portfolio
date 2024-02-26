@@ -1,0 +1,133 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'SF UI';
+    src: url('SFUIText-Light.ttf') format('truetype');
+    /* Add other font weights and styles as needed */
+  }
+
+  
+.section-container{
+    @apply max-w-7xl mx-auto text-center mb-20 px-10
+}
+
+@layer components{
+    .btn { @apply px-10 py-2 font-bold tracking-widest
+    uppercase border-2 border-black hover:bg-black hover:text-white
+    duration-200
+    }
+    .skillitem { @apply md:w-10   w-6 duration-300 hover:scale-125 m-5
+    }
+    .skillgrid { @apply  flex  max-w-4xl items-center mx-auto mb-6 justify-between md:flex-row  
+    }
+    .projecttab { @apply  flex flex-col items-center space-y-16 justify-between md:flex-row md:space-y-0 md:space-x-12 
+    }
+    .projectimage{
+        @apply w-72 max-h-40 shadow-md hover:shadow-lg rounded-lg hover:scale-105 duration-300
+    }
+}
+
+#top{
+    background-image: url('../images/abc.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    index:z-20
+}
+
+@layer base{
+    h1{
+        @apply text-3xl;
+    }
+    h2{
+    @apply text-xl;
+    }
+}
+
+@layer components{
+    .navbottom{
+        @apply mx-2 mt-2 duration-300 border-b-2 opacity-0  border-white group-hover:opacity-100
+    }
+    .navtext{
+        @apply group-hover:text-white duration-300
+    }
+}
+
+/* hamburger menu */
+.hamburger{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position:relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom{
+    position:absolute;
+    width:24px;
+    height:2px;
+    top:0;
+    left:0;
+    background:white;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+.hamburger-middle{
+    width:18px;
+}
+.hamburger-bottom{
+    width:0px;
+}
+.hamburger-middle{
+    transform:translateY(7px);
+}
+.hamburger-bottom{
+    transform:translateY(14px);
+    
+}
+
+.open{
+    transform:rotate(90deg);
+    
+}
+
+
+.open .hamburger-top{
+    transform:rotate(45deg) translateY(6px) translateX(6px);
+}
+.open .hamburger-middle{
+    display:none;
+}
+.open .hamburger-bottom{
+    transform:rotate(-45deg) translateY(6px) translateX(-6px);
+    width:24px;
+}
+
+
+
+.menu {
+    position: absolute;
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    padding-bottom: 4rem;
+    padding-left:3rem;
+    text-align: left;
+    padding-top: 6rem;
+    transition: transform 0.3s ease-in-out; /* Added transition for smooth slide animation */
+    transform: translateY(-100%);
+     /* Initially hide the menu by shifting it out of the viewport */
+  }
+  
+  .menu.flex {
+    transform: translateY(0); /* Show the menu by bringing it back into the viewport */
+  }
+
+
