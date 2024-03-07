@@ -34,3 +34,35 @@ function onTabClick(e) {
 
 
 
+window.addEventListener('scroll',reveal);
+window.addEventListener('scroll',revealup);
+function reveal(){
+  let reveals=document.querySelectorAll('.reveal');
+  for (let i=0;i<reveals.length;i++){
+    let windowheight=window.innerHeight;
+    let revealtop=reveals[i].getBoundingClientRect().top;
+    let revealpoint=200;
+    if (revealtop<windowheight-revealpoint){
+      reveals[i].classList.add('active');
+    }
+    else{
+      reveals[i].classList.remove('active');
+    }
+  }
+}
+
+function revealup(){
+  let revealupElements = document.querySelectorAll('.revealup');
+  for (let i = 0; i < revealupElements.length; i++) {
+    let windowheight = window.innerHeight;
+    let revealtop = revealupElements[i].getBoundingClientRect().top;
+    let revealpoint = revealupElements[i].classList.contains('art') ? 300 : 50;
+    if (revealtop < windowheight - revealpoint) {
+      revealupElements[i].classList.add('active');
+    } else {
+      revealupElements[i].classList.remove('active');
+    }
+  }
+}
+
+

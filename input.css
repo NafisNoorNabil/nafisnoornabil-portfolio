@@ -131,3 +131,26 @@
   }
 
 
+  .reveal{
+    position:relative;
+    transform:translateX(150px);
+    opacity:0;
+    transition:all 1.5s ease;
+}
+
+.reveal.active{
+    transform:translateX(0px);
+    opacity:1;
+}
+.revealup{
+    position:relative;
+    transform:translateY(150px);
+    opacity:0;
+    transition:all 1s ease;
+}
+
+.revealup.active{
+    transform:translateY(0px);
+    opacity:1;
+}
+
