@@ -1270,10 +1270,6 @@ h2 {
   padding-top: 1.5rem;
 }
 
-.text-left {
-  text-align: left;
-}
-
 .text-center {
   text-align: center;
 }
@@ -1711,11 +1707,6 @@ h2 {
     margin-bottom: 4rem;
   }
 
-  .md\:my-auto {
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-
   .md\:mb-2 {
     margin-bottom: 0.5rem;
   }
@@ -1891,14 +1882,6 @@ h2 {
 
   .md\:placeholder\:text-left::placeholder {
     text-align: left;
-  }
-
-  .md\:placeholder\:text-center::-moz-placeholder {
-    text-align: center;
-  }
-
-  .md\:placeholder\:text-center::placeholder {
-    text-align: center;
   }
 }
 
