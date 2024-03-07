@@ -66,3 +66,19 @@ function revealup(){
 }
 
 
+const text = "I'm Nafis Noor Nabil";
+const topname = document.getElementById('topname');
+
+let index = 0;
+
+function type() {
+  topname.textContent += text[index];
+  index++;
+
+  if (index === text.length) {
+    clearInterval(typingInterval);
+    topname.classList.add('typing-complete');
+  }
+}
+
+const typingInterval = setInterval(type, 100);
