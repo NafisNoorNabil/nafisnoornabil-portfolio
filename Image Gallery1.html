@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+
+        img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+            display: inline-block;
+            transition:0.3s;
+        }
+        img:hover {
+            transform: scale(1.06);
+        }
+        .gallery {
+            margin: 10px;
+            display: grid;
+            grid-gap: 30px;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            grid-auto-rows: 450px;
+            grid-auto-flow: dense;
+        }
+        .gallery > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .gallery > div > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .gallery .tall {
+            grid-row: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class=" flex flex-col min-h-screen justify-center bg-[#0E1118] pb-20">
+        <div class="flex justify-end flex-col items-center my-6 space-y-6 md:flex-row md:space-y-0 md:mb-2 md:my-16 md:mr-16">
+            <div class="group mx-8  text-white text-2xl">
+                <a href="index.html">Portfolio</a>
+                <div class="mx-2 mt-2 duration-500 border-b-2 opacity-0 border-white group-hover:opacity-100"></div>
+            </div>
+
+        </div>
+        <h1 class="text-white font-semibold bg-black svg-red text-4xl p-6 text-center my-16 hover:p-8 hover:bg-white hover:text-black
+        duration-200 tracking-widest">ARTWORK</h1>        
+        <div class="gallery">
+            <div class="image-container">
+                <img src="images/art/1.jpg">
+            </div>
+            <div class="image-container">
+                <img src="images/art/2.jpg">
+            </div>
+            <div class="image-container tall">
+                <img src="images/art/3.jpg">
+            </div>
+            <div class="image-container">
+                <img src="images/art/4.jpg">
+            </div>
+            <div class="image-container">
+                <img src="images/art/5.jpg">
+            </div>
+            <div class="image-container">
+                <img src="images/art/6.jpg">
+            </div>
+            <div class="image-container">
+                <img src="images/art/7.jpg">
+            </div>
+            <div class="image-container tall">
+                <img src="images/art/8.jpg">
+            </div>
+            <div class="image-container">
+                <img src="images/art/9.jpg">
+            </div>
+            <div class="image-container">
+                <img src="images/art/10.jpg">
+            </div>
+            <div class="image-container">
+                <img src="images/art/11.jpg">
+            </div>
+            <div class="image-container">
+                <img src="images/art/12.jpg">
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html> 
