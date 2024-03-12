@@ -188,3 +188,42 @@
     content: ' ';
   }
   
+
+
+.box1 {
+    width:15px;
+    height:15px;
+    background-image: linear-gradient(to right, rgb(151, 251, 251), rgb(0, 214, 214));
+    animation: rotate 3s linear infinite;
+    border-radius: 3px;
+    box-shadow: 0 0 4px rgb(151, 251, 251);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box2 {
+    width:15px;
+    height:15px;
+    background-image: linear-gradient(to right, rgb(128, 74, 235), rgb(69, 1, 172));
+    animation: fadeIn 3s linear infinite;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgb(136, 77, 255);
+}
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:5;
+    }
+    100% {
+        opacity:0;
+    }
+}
