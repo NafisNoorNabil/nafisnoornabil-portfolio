@@ -2,15 +2,15 @@ const btn = document.getElementById('menu-btn')
 const menu = document.getElementById('menu')
 
 btn.addEventListener('click', navToggle)
-
-const tabs = document.querySelectorAll('.tab')
-const panels = document.querySelectorAll('.panel')
 function navToggle() {
   btn.classList.toggle('open')
   menu.classList.toggle('flex')
   menu.classList.toggle('hidden')
 
 }
+const tabs = document.querySelectorAll('.tab')
+const panels = document.querySelectorAll('.panel')
+
 tabs.forEach((tab) => tab.addEventListener('click', onTabClick))
 function onTabClick(e) {
   // Deactivate all tabs
