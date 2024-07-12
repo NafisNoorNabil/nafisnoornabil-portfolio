@@ -8,6 +8,27 @@ window.addEventListener('load', function() {
   // Show the main content
   var content = document.getElementById('content');
   content.style.display = 'block';
+
+
+
+  
+  const text = "I'm Nafis Noor Nabil";
+  const topname = document.getElementById('topname');
+
+  let index = 0;
+
+  function type() {
+    topname.textContent += text[index];
+    index++;
+
+    if (index === text.length) {
+      clearInterval(typingInterval);
+      topname.classList.add('typing-complete');
+    }
+  }
+
+  const typingInterval = setInterval(type, 100);
+
 });
 
 
@@ -79,20 +100,3 @@ function revealup(){
   }
 }
 
-
-const text = "I'm Nafis Noor Nabil";
-const topname = document.getElementById('topname');
-
-let index = 0;
-
-function type() {
-  topname.textContent += text[index];
-  index++;
-
-  if (index === text.length) {
-    clearInterval(typingInterval);
-    topname.classList.add('typing-complete');
-  }
-}
-
-const typingInterval = setInterval(type, 100);
