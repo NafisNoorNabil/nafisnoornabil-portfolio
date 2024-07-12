@@ -1,3 +1,17 @@
+
+// Wait for the window to load completely
+window.addEventListener('load', function() {
+  // Hide the preloader
+  var preloader = document.getElementById('preloader');
+  preloader.style.display = 'none';
+
+  // Show the main content
+  var content = document.getElementById('content');
+  content.style.display = 'block';
+});
+
+
+
 const btn = document.getElementById('menu-btn')
 const menu = document.getElementById('menu')
 
