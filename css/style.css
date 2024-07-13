@@ -1387,8 +1387,8 @@ h2 {
   line-height: 1.75rem;
 }
 
-.tracking-tighter {
-  letter-spacing: -0.05em;
+.tracking-tight {
+  letter-spacing: -0.025em;
 }
 
 .tracking-wide {
@@ -1401,10 +1401,6 @@ h2 {
 
 .tracking-widest {
   letter-spacing: .3em;
-}
-
-.tracking-tight {
-  letter-spacing: -0.025em;
 }
 
 .text-\[\#3D155F\] {
@@ -1615,6 +1611,7 @@ h2 {
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  transition: opacity 0.5s ease-out;
 }
 
 .spinner {

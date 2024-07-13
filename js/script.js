@@ -1,16 +1,16 @@
 
-// Wait for the window to load completely
 window.addEventListener('load', function() {
-  // Hide the preloader
-  var preloader = document.getElementById('preloader');
-  preloader.style.display = 'none';
 
-  // Show the main content
   var content = document.getElementById('content');
   content.style.display = 'block';
+  
 
+  var preloader = document.getElementById('preloader');
+  preloader.style.opacity = '0';
 
-
+  preloader.addEventListener('transitionend', function() {
+    preloader.style.display = 'none';
+  });
   
   const text = "I'm Nafis Noor Nabil";
   const topname = document.getElementById('topname');
@@ -30,6 +30,8 @@ window.addEventListener('load', function() {
   const typingInterval = setInterval(type, 100);
 
 });
+
+
 
 
 
