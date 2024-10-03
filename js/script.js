@@ -1,26 +1,21 @@
-
-window.addEventListener('load', function() {
-
+document.addEventListener('DOMContentLoaded', function() {
   var content = document.getElementById('content');
-  content.style.display = 'block';
-  
-
   var preloader = document.getElementById('preloader');
+
+  content.style.display = 'block';
   preloader.style.opacity = '0';
 
   preloader.addEventListener('transitionend', function() {
     preloader.style.display = 'none';
   });
-  
+
   const text = "I'm Nafis Noor Nabil";
   const topname = document.getElementById('topname');
-
   let index = 0;
 
   function type() {
     topname.textContent += text[index];
     index++;
-
     if (index === text.length) {
       clearInterval(typingInterval);
       topname.classList.add('typing-complete');
@@ -28,7 +23,6 @@ window.addEventListener('load', function() {
   }
 
   const typingInterval = setInterval(type, 100);
-
 });
 
 
